@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opay Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{ 
+            font-family: sans-serif;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .header-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 35px;
+            margin-right: 35px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .header-content{
+            display: flex;
+            gap: 10px;
+        }
+        .hero-section{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto;
+            background-color: green;
+            padding: 20px 20px;
+            border-style: solid;
+            border-radius: 20px;
+            border-color:green;
+            color: white;
+        }
+        .balance h3{
+            font-size: 15px;
+            margin-top: 12px;
+        }
+        .gift h3{
+            font-size: 20px;
+            margin-top: 12px;
+        }
+        .payment-option{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* margin-left: 80px; */
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .button{
+            display: flex;
+            gap: 70px;
+        }
+        .btn{
+            display: flex;
+            color: green;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            font-size: 30px;
+        }
+        ul li{
+            list-style-type: none;
+        }
+        .gift-header li{
+            list-style-type: none;
+        }
+        .hero-section h3{
+            margin-bottom: 20px;
+        }
+        .link{
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        .amount{
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        .add{
+            margin-left: 60px;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 10px;
+            background-color: white;
+            padding: 5px 5px;
+            font-size: 12px;
+        }
+        .nxt{
+            border-style: solid;
+            border-width: 1px;
+            border-color: green;
+            background-color: green;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 20px;
+            margin-left: 10px;
+        }
+        .icons{
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+        }
+        .text{
+            font-size: 10px;
+            color: black;
+            text-align: center;
+        }
+        .features-container{
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+            gap: 60px;
+            /* margin-left: 55px; */
+            justify-content: center;
+        }
+        .internet{
+            color: green;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 25px;
+        }
+        .services-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 56px;
+            /* margin-left: 45px; */
+        }
+        .support{
+            color: green;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 25px;
+        }
+        .gift-header{
+            /* display: flex; */
+            /* align-items: center; */
+            /* justify-content: space-between; */
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 20px;
+            border-style: solid;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .gift{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .gift-content{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .details{
+            border-style: solid;
+            border-color: green;
+            border-width: 1px;
+            background-color: green;
+            color: white;
+            padding: 20px 10px;
+            border-radius: 10px;
+        }
+        .gift-header{
+            background: linear-gradient(to right, lightgreen, orange);
+        }
+        .gift-content{
+            background-color: white;
+        }
+        .final{
+            display: flex;
+            gap: 10px;
+            width: 80%;
+            /* margin: 0 auto; */
+            margin-top: 50px;
+            align-items: center;   
+        }
+        .final-1{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        footer{
+            display: flex;
+            gap: 30px;
+            /* margin: 0 auto; */
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            position: fixed;
+            bottom: 0;
+            /* margin-left: 20px; */
+            padding-left: 20px;
+            /* margin-bottom: 20px; */
+            padding-bottom: 20px;
+            border-top-style: solid;
+            border-top-width: 0.5px;
+            padding-top: 20px;
+        }
+        .overall{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 30px;
+            color: green;
+        }
+        .txt{
+            font-size: 10px;
+            color: black;
+            text-align: center;
+        }
+        .picture{
+            display: none;
+        }
+        @media (min-width: 768px) {
+           footer{
+            left: 0;
+            height: 90vh;
+            background-color: green;
+            color: white;
+            flex-direction: column;
+            align-items: start;
+            width: 7%;
+            border-radius: 10px;
+            border-style: solid;
+           }
+           .overall{
+            color: white;
+            flex-direction: row;
+            align-items: center;
+            font-size: 30px;
+           }
+           main{
+            margin-left: 9%;
+           }
+           .hero-section{
+            width: 90%;
+           }
+           .button{
+            gap: 200px;
+           }
+           .features-container{
+            gap: 200px;
+            padding-bottom: 30px;
+            padding-top: 20px;
+           }
+           .services-container{
+            gap: 200px;
+            padding-bottom: 30px;
+           }
+           .gift-header{
+            width: 65%;
+           }
+           .gift-content li{
+            margin-left: 400px;
+           }
+           .serial{
+            padding-left: 20px;
+           }
+           .final{
+            padding-left: 180px;
+            padding-bottom: 20px ;
+           }
+           .txt{
+            color: white;
+            font-size: 10px;
+           }
+           .picture{
+            display: block;
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+           }
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <header class="header-container">
+        <div class="header-content">
+            <i class="fa-solid fa-circle-user icons"></i>
+            <h3>Hi, Boss DEV</h3>
+        </div>
+        <div class="icons">
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-qrcode"></i>
+            <i class="fa-regular fa-bell"></i>
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="balance">
+            <!-- <h3>Available Balance <span><i class="fa-solid fa-eye"></i></span></h3> -->
+            <h3 class="bal">Available Balance <i class="fa-solid fa-eye" style="font-size: 12px;"></i></h3>
+            <p class="amount">₦100,000.00</p>
+        </div>
+        <div class="history">
+            <ul>
+                <li class="link"><p>Transaction History <a href="">></a></p></li>
+                <li class="add"><a style="color: green;" href="">+ Add Money</a></li>
+            </ul>
+        </div>
+    </section> 
+    <section class="payment-option">
+        <div class="button">
+            <div class="btn">
+                <i class="fa-solid fa-message"></i>
+                <p class="text">To Opay</p>
+            </div>
+            <div class="btn">
+                <i class="fa-solid fa-building-columns"></i>
+                <p class="text">To Bank</p>
+            </div>
+            <div class="btn">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+                <p class="text">Withdraw</p>
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="features-container">
+            <div class="internet">
+                <i class="fa-solid fa-signal"></i>
+                <p class="text">Airtime</p>
+            </div>
+            <div class="internet">
+                <i class="fa-solid fa-wifi"></i>
+                <p class="text">Data</p>
+            </div>
+            <div class="internet">
+                <i class="fa-solid fa-futbol"></i>
+                <p class="text">Betting</p>
+            </div>
+            <div class="internet">
+                <i class="fa-solid fa-tv"></i>
+                <p class="text">Tv</p>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <div class="services-container">
+            <div class="support">
+                <i class="fa-solid fa-piggy-bank"></i>
+                <p class="text">OWealth</p>
+            </div>
+            <div class="support">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <p class="text">Loan</p>
+            </div>
+            <div class="support">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <p class="text">Play4aChild</p>
+            </div>
+            <div class="support">
+                <i class="fa-solid fa-ellipsis"></i>
+                <p class="text">More</p>
+            </div>
+        </div>
+    </section>
+    <section class="gift-section">
+        <div class="gift-container">
+            <div class="gift-header">
+                <div class="gift">
+                    <h3>Get Your Vouchers</h3>
+                    <i class="fa-solid fa-gift" style="font-size: 20px; color: purple;"><a style="color: black; font-size: 15px;" href="">></a></i>
+                </div>
+                <div class="gift-content">
+                    <div class="details">
+                        <p style="text-align: center;">₦50 <br>Voucher</p>
+                    </div>
+                    <div class="serial">
+                        <h3 style="font-size: 12px;">Betting Voucher</h3>
+                        <p class="text">2026.01.05-2026.02.01</p>
+                        <p class="text">Purchase over ₦1000</p>
+                    </div>
+                    <li class="nxt"><a href="">Get it</a></li>
+                </div>   
+            </div>
+        </div>
+    </section>
+    <section class="final">
+        <img src="./logo.jpg" alt="">
+        <div class="final-1">
+            <h3>Cash up for grabs!</h3>
+            <p>Invite friends to earn ₦3,000 Cash</p>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="picture"><img src="./opay_logo-removebg-preview.png" alt="" width="70px" height="40px" style="text-align: center;"></div>
+        <div class="overall">
+            <i class="fa-solid fa-house"></i>
+            <p class="txt">Home</p>
+        </div>
+        <div class="overall">
+            <i class="fa-solid fa-gem"></i>
+            <p class="txt">Rewards</p>
+        </div>
+        <div class="overall">
+            <i class="fa-solid fa-chart-line"></i>
+            <p class="txt">Finance</p>
+        </div>
+        <div class="overall">
+             <i class="fa-solid fa-credit-card"></i>
+            <p class="txt">Cards</p>
+        </div>
+        <div class="overall">
+            <i class="fa-solid fa-user"></i>
+            <p class="txt">Me</p>
+        </div>
+    </footer>
+</body>
+</html>
